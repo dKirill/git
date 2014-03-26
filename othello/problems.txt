@@ -1,0 +1,3 @@
+bot zavisaet esli esli stavit' v UGOL (problema s back up / roll back) -
+- resheno s pomow'u strahovochnogo rollback(). no xz pochemu
+sleep_for rabotaet HYEVO

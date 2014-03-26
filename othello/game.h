@@ -9,7 +9,6 @@
 #include <vector>
 #include <cstring>
 #include <QDebug>
-//"ne ochen" effektivno sdelan bot :D nu da ladno
 
 using namespace std;
 
@@ -25,7 +24,7 @@ void intToEnum(column&, row&, int, int);
 
 class game;
 
-void bot_gets_turn(game&, column&, row&); //teper po ssilke
+void bot_gets_turn(game&, column&, row&); 
 void bot_makes_turn(game&);
 void play(game&);
 
@@ -55,7 +54,7 @@ private:
 
     bool backed_up;
 public:
-    explicit game(bool = false, cell = white); //false = 2 igroka, true-PvBot
+    explicit game(bool = false, cell = white); 
     ~game() { }
 
     int turn(column, row);
@@ -83,15 +82,14 @@ public:
     const char* curr_player() { return curr == 0 ? "player1" : "player2"; }
     int get_count() { return count; }
     std::string get_winner();
-    //vector<vector<cell> > get_copy_of_gd() { return gamedeck; } pohodu ne nujna
     cell wh_c(int i, int j) { return gamedeck[i][j]; }
 
     void set_lt(column, row);
 
     void print();
 signals:
-    void eot(); //konec hoda
-    void eog(); //konec partii
+    void eot(); //end of turn
+    void eog(); //end of match
     void new_turn_table(const char*, const char*);
 public slots:
     void make_turn(int, int);

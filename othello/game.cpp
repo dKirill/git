@@ -149,7 +149,7 @@ int game::turn(column c, row r)
 
     if (backed_up == false) //backed_up==true - bot testiruet hod
     {
-        if (!strcmp(curr_player(), "player2") )
+         if (!strcmp(curr_player(), "player2") && bot_plays() == true)
             this_thread::sleep_for(chrono::milliseconds(500));
 
         swap(curr, next); //smena hoda
